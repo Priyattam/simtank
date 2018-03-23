@@ -28,7 +28,7 @@ def _computeTank():
     print(left, right)
 
     avgSpeed = (left + right) / 2
-    moment = (right - left) / 2
+    moment = (left - right) / 2
     
     return (_toHex(moment), _toHex(avgSpeed))
 
