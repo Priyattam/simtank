@@ -44,7 +44,7 @@ def _computeTank() -> tuple:
     left = -HW_JOY.get_axis(AXISMAP.LEFTY)
     right = -HW_JOY.get_axis(AXISMAP.RIGHTY)
 
-    print(left, right)
+    print("Left HW:", left, "Right HW", right)
 
     avgSpeed = (left + right) / 2
     moment = (left - right) / 2
@@ -88,7 +88,7 @@ def _toInt(boolean: bool) -> int:
 if __name__ == "__main__":
     print("Pygame detects", pygame.joystick.get_count(), "joysticks connected")
     print("The joystick at", HW_JOY_ID, "has", HW_JOY.get_numaxes(), "axes")
-
+    print("If the following numbers do not change when you move the joysticks, something is wrong . . .")
     # Let user glance at log info above
     time.sleep(0.5)
 
